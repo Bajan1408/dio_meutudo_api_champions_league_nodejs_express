@@ -8,5 +8,7 @@ export function createApp() {
 
     app.use('/', router);
 
+    app.use('/:id', router);
+
     return app;
 }
