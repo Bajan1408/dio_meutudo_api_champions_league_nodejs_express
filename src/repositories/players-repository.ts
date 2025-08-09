@@ -1,4 +1,5 @@
 import { PlayerModel } from "../models/player-model";
+import { StatsModel } from "../models/stats-model";
 
 export const database: PlayerModel[] = [
     {
@@ -342,3 +343,25 @@ export const insertPlayer = async (player: PlayerModel) => {
 export const deletePlayer = async (index: number) => {
     database.splice(index, 1);
 }
+
+export const updatePlayer = async (id: number, body: StatsModel) => {
+    const playerIndex = database.findIndex(el => el.id === id);
+
+    if(database[playerIndex]) {
+        database[playerIndex].statistics = body; 
+    }
+    
+}
+
+
+//modelo json api update
+
+// {
+//     "Overall": 9,
+//     "Pace": 4,
+//     "Shooting": 3,
+//     "Passing": 5,
+//     "Dribbling": 2,
+//     "Defending": 7,
+//     "Physical": 6,
+// }

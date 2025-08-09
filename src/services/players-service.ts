@@ -1,11 +1,12 @@
 import { PlayerModel } from "../models/player-model";
-import { deletePlayer, findAllPlayers, findPlayerById, insertPlayer } from "../repositories/players-repository";
+import { StatsModel } from "../models/stats-model";
+import * as repositories from "../repositories/players-repository";
 import * as httpResponse from "../utils/http-helpers";
 
 let serverResponse = null;
 
 export const getPlayersListService = async () => {
-    const data = await findAllPlayers();
+    const data = await repositories.findAllPlayers();
     
     if(data) {
         serverResponse = await httpResponse.ok(data); 
@@ -16,7 +17,7 @@ export const getPlayersListService = async () => {
 }
 
 export const getPlayerByIdService = async (id: number) => {
-    const data = await findPlayerById(id);
+    const data = await repositories.findPlayerById(id);
 
     if(data) {
         serverResponse = await httpResponse.ok(data); 
@@ -33,7 +34,7 @@ export const postPlayerService = async (player: PlayerModel) => {
         return await httpResponse.badRequest();
     }
 
-    await insertPlayer(player);
+    await repositories.insertPlayer(player);
     return await httpResponse.created();
 }
 
@@ -44,8 +45,19 @@ export const deletePlayerService = async (players: PlayerModel[], id: number) =>
 
     if(indexPlayer === -1) return httpResponse.noContent();
 
-    await deletePlayer(indexPlayer);
+    await repositories.deletePlayer(indexPlayer);
 
     return await httpResponse.deleted();
 
+}
+
+export const updatePlayerService = async (id: number, body: StatsModel) => {
+    const indexPlayer = repositories.database.findIndex((el) => {
+        return el.id === id;
+    })
+    
+    if(indexPlayer === -1) return httpResponse.noContent();
+
+    await repositories.updatePlayer(id, body);
+    return await httpResponse.updated();
 }

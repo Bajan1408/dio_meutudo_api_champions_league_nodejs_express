@@ -40,3 +40,12 @@ export const deleted = async (): Promise<HttpResponse> => {
     }
 }
 
+export const updated = async (): Promise<HttpResponse> => {
+    return {
+        statusCode: 200,
+        body: {
+            msg: "Registro atualizado com sucesso!"
+        }
+    }
+}
+

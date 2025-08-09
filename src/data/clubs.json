@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Real Madrid"
+    },
+    {
+        "id": 2,
+        "name": "Barcelona"
+    },
+    {
+        "id": 3,
+        "name": "Manchester City"
+    },
+    {
+        "id": 4,
+        "name": "Arsenal"
+    },
+    {
+        "id": 5,
+        "name": "Aston Villa"
+    },
+    {
+        "id": 6,
+        "name": "Liverpool"
+    },
+    {
+        "id": 7,
+        "name": "Atlético de Madrid"
+    },
+    {
+        "id": 8,
+        "name": "Girona"
+    },
+    {
+        "id": 9,
+        "name": "Bayern München"
+    },
+    {
+        "id": 10,
+        "name": "Borussia Dortmund"
+    },
+    {
+        "id": 11,
+        "name": "RB Leipzig"
+    },
+    {
+        "id": 12,
+        "name": "Bayer Leverkusen"
+    },
+    {
+        "id": 13,
+        "name": "Inter"
+    },
+    {
+        "id": 14,
+        "name": "Milan"
+    },
+    {
+        "id": 15,
+        "name": "Juventus"
+    },
+    {
+        "id": 16,
+        "name": "Atalanta"
+    },
+    {
+        "id": 17,
+        "name": "Bologna"
+    },
+    {
+        "id": 18,
+        "name": "Paris Saint-Germain"
+    },
+    {
+        "id": 19,
+        "name": "Monaco"
+    },
+    {
+        "id": 20,
+        "name": "Brest"
+    },
+    {
+        "id": 21,
+        "name": "Lille"
+    },
+    {
+        "id": 22,
+        "name": "PSV Eindhoven"
+    },
+    {
+        "id": 23,
+        "name": "Feyenoord"
+    },
+    {
+        "id": 24,
+        "name": "Sporting CP"
+    },
+    {
+        "id": 25,
+        "name": "Benfica"
+    },
+    {
+        "id": 26,
+        "name": "Club Brugge"
+    },
+    {
+        "id": 27,
+        "name": "Celtic"
+    },
+    {
+        "id": 28,
+        "name": "Salzburg"
+    },
+    {
+        "id": 29,
+        "name": "Sturm Graz"
+    },
+    {
+        "id": 30,
+        "name": "GNK Dinamo"
+    },
+    {
+        "id": 31,
+        "name": "Crvena Zvezda"
+    },
+    {
+        "id": 32,
+        "name": "Sparta Praha"
+    },
+    {
+        "id": 33,
+        "name": "Slovan Bratislava"
+    },
+    {
+        "id": 34,
+        "name": "Young Boys"
+    },
+    {
+        "id": 35,
+        "name": "Shakhtar Donetsk"
+    },
+    {
+        "id": 36,
+        "name": "Lille"
+    }
+]
