@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        #btn_list_players {
+            background-color: #3de03d;
+            border: 2px solid #267a26 ;
+            border-radius: .3rem;
+            width: 9rem;
+            height: 1.75rem;
+            cursor: pointer;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <button id="btn_list_players">Listar jogadores</button>
+    </div>
+    
+    <script>
+        const endpoint = 'http://localhost:3335/listPlayers';
+
+        async function listPlayers() {
+            const data = await fetch(endpoint);
+            const response = await data.json();
+
+            console.log(response);
+        }
+
+        const btnListPlayers = document.getElementById('btn_list_players');
+
+        btnListPlayers.addEventListener('click', listPlayers);
+
+    </script>
+</body>
+</html>
