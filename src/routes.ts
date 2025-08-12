@@ -4,18 +4,18 @@ import * as clubController from "./controllers/clubs-controller";
 
 const router = Router();
 
-router.get('/listPlayers', playerController.getPlayerController);
+router.get('/players', playerController.getPlayerController);
 
-router.get('/listPlayerById/:id', playerController.getPlayerControllerById);
+router.get('/players/:id', playerController.getPlayerControllerById);
 
-router.post('/addPlayer', playerController.postPlayerController);
+router.post('/players', playerController.postPlayerController);
 
-router.delete('/deletePlayer/:id', playerController.deletePlayerController);
+router.delete('/players/:id', playerController.deletePlayerController);
 
-router.patch('/updatePlayer/:id', playerController.updatePlayerController);
+router.patch('/players/:id', playerController.updatePlayerController);
 
 
-router.get('/listClubs', clubController.getClubsController);
+router.get('/clubs', clubController.getClubsController);
 
 
 export default router;
